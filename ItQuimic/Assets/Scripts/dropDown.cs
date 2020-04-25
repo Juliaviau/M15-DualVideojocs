@@ -58,12 +58,12 @@ public class dropDown : MonoBehaviour {
         }
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         PopulateList();
     }
 
+    //Afegir la llista per a escollir l'itinerari a seguir
     void PopulateList ()
     {
         dropdown.AddOptions(noms);

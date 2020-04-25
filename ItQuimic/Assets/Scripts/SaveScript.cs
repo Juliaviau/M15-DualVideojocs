@@ -22,14 +22,14 @@ public class SaveScript : MonoBehaviour {
     //................................................................EXPLICACIÓ..............................................................................
 
     public GameObject panelEliminar;
-    public Text dadesAEliminar;  //
-    private float distancia;  //
-    private GPS GPS; //
-    private string savePath;  //
-    float _eQuatorialEarthRadius = 6378.1370f; //
-    float _d2r = (Mathf.PI / 180f); //
-    public Text distanciaMetres; //
-    public GameObject panelSerCoordenades; //
+    public Text dadesAEliminar;  
+    private float distancia;  
+    private GPS GPS; 
+    private string savePath;  
+    float _eQuatorialEarthRadius = 6378.1370f; 
+    float _d2r = (Mathf.PI / 180f); 
+    public Text distanciaMetres; 
+    public GameObject panelSerCoordenades; 
     public Text textSerCoordenades; //al ser a les cordenades surt el panell amb el text guardat
 
     //Al començar, agafa el component de GPS, i guarda la ruta on guardarà
@@ -107,13 +107,241 @@ public class SaveScript : MonoBehaviour {
         float dlat = (lat2 - lat1) * _d2r;
         float a = Mathf.Pow(Mathf.Sin(dlat / 2f), 2f) + Mathf.Cos(lat1 * _d2r) * Mathf.Cos(lat2 * _d2r) * Mathf.Pow(Mathf.Sin(dlong / 2f), 2f);
         float c = 2f * Mathf.Atan2(Mathf.Sqrt(a), Mathf.Sqrt(1f - a));
-        float d = _eQuatorialEarthRadius * c;
+        float distancia = _eQuatorialEarthRadius * c;
 
         Debug.Log("entra4747474744");
 
-        return d;
+        return distancia;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

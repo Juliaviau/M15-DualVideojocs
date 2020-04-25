@@ -11,7 +11,6 @@ public class Save {
 
     //................................................................EXPLICACIÓ..............................................................................
 
-
     public float SavedLat;
     public float SavedLong;
     public string SavedText;

@@ -20,69 +20,69 @@ public class PhoneCamera : MonoBehaviour {
     //................................................................EXPLICACIÓ..............................................................................
 
 
-    private bool camAvaliable;            // comprovar si la camera esta disponible
-    private WebCamTexture backCam;        // agafar la textura de la camera del darrere
-    private Texture defaultBackgorund;    // la textura inicial del fons
-    public RawImage background;           // l'imatge del fons
-    public AspectRatioFitter fit;         // 
-    public Text miss_error;
+    private bool camDisponible;            // comprovar si la camera esta disponible
+    private WebCamTexture cameraTextura;        // agafar la textura de la camera del darrere
+    private Texture fonsDefecte;    // la textura inicial del fons
+    public RawImage fons;           // l'imatge del fons
+    public AspectRatioFitter fit;         
+    public Text missatgeError;
     public GameObject panellErrors;
 
     void Start()
     {
         //posar per defecte l'imatge de fons
-        defaultBackgorund = background.texture;
+        fonsDefecte = fons.texture;
 
         //Guardar dins la variable devices, tots els dispositius disponibles
-        WebCamDevice[] devices = WebCamTexture.devices;
+        WebCamDevice[] dispositius = WebCamTexture.devices;
 
         //Si no pot detectar cap camera avisa de l'error 
-        if (devices.Length == 0) {
-            miss_error.text = miss_error.text + " No s'ha detectat cap càmera";
+        if (dispositius.Length == 0) {
+            missatgeError.text = missatgeError.text + " No s'ha detectat cap càmera";
             panellErrors.SetActive(true);
             Debug.Log("No s'ha detectat cap càmera");
-            camAvaliable = false;
+            camDisponible = false;
             return;
         }
         
         //Per a cada camera del sipositiu, busca la del darrere
-        for (int i = 0; i < devices.Length; i++) {
-            if (!devices[i].isFrontFacing) {
-                backCam = new WebCamTexture(devices[i].name, Screen.width, Screen.height);
+        for (int i = 0; i < dispositius.Length; i++) {
+            if (!dispositius[i].isFrontFacing) {
+                cameraTextura = new WebCamTexture(dispositius[i].name, Screen.width, Screen.height);
             }
         }
 
         //Si no ha trobat cap camera del darrere
-        if (backCam == null) {
-            miss_error.text = miss_error.text + " No es pot trobar la camera del darrere";
+        if (cameraTextura == null) {
+            missatgeError.text = missatgeError.text + " No es pot trobar la camera del darrere";
             panellErrors.SetActive(true);
             Debug.Log("No es pot trobar la camera del darrere");
             return;
         }
 
         //Te la camera del darrere, l'activa i la posa com a fons.
-        backCam.Play();
-        background.texture = backCam;
-        camAvaliable = true;
+        cameraTextura.Play();
+        fons.texture = cameraTextura;
+        camDisponible = true;
     }
 
 
     void Update() {
 
-        if (!camAvaliable) {
+        if (!camDisponible) {
             return;
         }
 
         //Tamany de la camera
-        float ratio = (float)backCam.width / (float)backCam.height;
+        float ratio = (float)cameraTextura.width / (float)cameraTextura.height;
         fit.aspectRatio = ratio;
 
         //Escala de la camera
-        float scaleY = backCam.videoVerticallyMirrored ? -1f : 1f;
-        background.rectTransform.localScale = new Vector3(1f, scaleY, 1f);
+        float scaleY = cameraTextura.videoVerticallyMirrored ? -1f : 1f;
+        fons.rectTransform.localScale = new Vector3(1f, scaleY, 1f);
 
         //Rotació de la camera
-        int orient = -backCam.videoRotationAngle;
-        background.rectTransform.localEulerAngles = new Vector3(0, 0, orient);
+        int orient = -cameraTextura.videoRotationAngle;
+        fons.rectTransform.localEulerAngles = new Vector3(0, 0, orient);
     }
 }

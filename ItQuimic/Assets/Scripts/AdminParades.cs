@@ -31,10 +31,10 @@ public class AdminParades : MonoBehaviour {
 
 
     private bool fotoMapAct = false;
-    //Depenent del boto que toqui s'haura de canviar el text del panell que s'obre
+    //SAegons del boto que toqui s'haura de canviar el text del panell que s'obre
 
 
-    //Controlar quina es la seguent parada. agafar les seves cordinades i quan estigui aprop, actiivar boto info (avisar) i quan estigui alla, acriva boto camera (avisar) 
+    //Controlar quina es la seguent parada. agafar les seves cordinades i quan estigui aprop, activar boto info (avisar) i quan estigui alla, acriva boto camera (avisar) 
 
     void Start() {
        // List<double> latParades = new List<double>();
@@ -98,6 +98,7 @@ public class AdminParades : MonoBehaviour {
         fotoMapAct = !fotoMapAct;
     }
 
+    //Informacio de la parada
     public void TextSegonsParada (int numero)
     {
         switch (numero)
@@ -138,10 +139,12 @@ public class AdminParades : MonoBehaviour {
         }
     }
 
+    //Descripcio a la parada
     public void PosarDescripcio (string desc) {
         descripcio.text = desc;
     }
 
+    //Titol a la parada
     public void PosarTitol (string titol) {
         enfosquir.SetActive(true);
         panell.SetActive(true);

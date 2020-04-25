@@ -16,7 +16,6 @@ public class InformacioParades : MonoBehaviour
         mText = gameObject.GetComponent<TextMeshProUGUI>();
     }
 
-    // Update is called once per frame
     void Update() {
         //agafar parada de la base de dades
         switch (parada) {

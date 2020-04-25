@@ -19,7 +19,7 @@ public class GPS : MonoBehaviour {
     public float GameLat { get; set; }
     public float GameLong { get; set; }
     private bool isGPSready;
-    public Text coordinates; //Diu les coordenades a les que esta
+    public Text coordinates; //Diu les coordenades on esta
     public Text miss_errors;
     public GameObject panellErrors;
 

@@ -10,16 +10,9 @@ public class ZoomCamera : MonoBehaviour
     public Button botoAmpliar;
     public Button botoReduir;
 
-    // Start is called before the first frame update
     void Start() {
-
         prefab.transform.localScale = new Vector3(2,2,2);       
     }
-
-    // Update is called once per frame
-    void Update() {
-        
-    } 
 
     public void Ampliar () {
 
@@ -41,12 +34,6 @@ public class ZoomCamera : MonoBehaviour
             x - 3.100006
             y  56.9
             z - 21.9*/
-
-        //fa zoom al clicar el +. quan arriba 
-
-        //si la posicio de la camera és superior o igual a el valor del maxim zoom
-        //com mes aprop, mes petit el numero.
-        //si arriba al numero el boto no fa res perque no es pot acostar més 
 
        // if (((camera.transform.position.y + zoom.y) != 56.9) && ((camera.transform.position.z + zoom.z) != -21.9)) {
 
