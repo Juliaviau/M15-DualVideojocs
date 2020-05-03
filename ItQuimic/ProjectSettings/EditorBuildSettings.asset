@@ -44,4 +44,37 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Parades/InformacioParada.unity
     guid: f1a16e9986fbad94e84fbdacc0b55a7a
+  - enabled: 1
+    path: Assets/Scenes/Parades/MostrarParades.unity
+    guid: a0ffeaa1fa28d0c408845f7dce3b6f79
+  - enabled: 1
+    path: Assets/Scenes/Parades/Parada2.unity
+    guid: 434e70032019cc54e880094c84f9b879
+  - enabled: 1
+    path: Assets/Scenes/Parades/Parada3.unity
+    guid: 2acfee8b510292742a664aeacd780e8d
+  - enabled: 1
+    path: Assets/Scenes/Parades/Parada4.unity
+    guid: 3369ad37d387b9741b97964a67779277
+  - enabled: 1
+    path: Assets/Scenes/Parades/Parada5.unity
+    guid: 0feeb0e49a343484fac12e8b284932b7
+  - enabled: 1
+    path: Assets/Scenes/Parades/Parada6.unity
+    guid: 1faa877fd44067f46bce3a9ee0efa71e
+  - enabled: 1
+    path: Assets/Scenes/Parades/Parada7.unity
+    guid: 946419a86ef456b4fbfaa77e6b040562
+  - enabled: 1
+    path: Assets/Scenes/Parades/Parada8.unity
+    guid: 401101afc230dd142a441d91484380fa
+  - enabled: 1
+    path: Assets/Scenes/Parades/Parada9.unity
+    guid: a294e667bf3913a4a8ac57b1de5287d5
+  - enabled: 1
+    path: Assets/Scenes/Parades/Parada10.unity
+    guid: 28c4bd24d023bd24aa6152cee74793d9
+  - enabled: 1
+    path: Assets/Scenes/Parades/Parada11.unity
+    guid: c9c8ea5d37550ee4982fb7ceab664c6a
   m_configObjects: {}

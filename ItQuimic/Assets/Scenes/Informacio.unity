@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -150,7 +151,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 312119390}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -222,8 +223,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218960158}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 1
+  m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
@@ -319,7 +321,7 @@ RectTransform:
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 312119390}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -580,6 +582,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 277503288}
+  - {fileID: 1243088287}
   - {fileID: 954934896}
   - {fileID: 1821187114}
   - {fileID: 160254004}
@@ -624,8 +627,8 @@ RectTransform:
   m_Father: {fileID: 1508631759}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.45694202}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -104.1}
   m_SizeDelta: {x: 0, y: 208.2}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -814,6 +817,73 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &876010071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 876010072}
+  - component: {fileID: 876010073}
+  m_Layer: 5
+  m_Name: TextContainer          Text i Barra
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &876010072
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876010071}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1630113485}
+  m_Father: {fileID: 1243088287}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -24.5, y: -34.7}
+  m_SizeDelta: {x: -109.1, y: -213.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &876010073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876010071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Content: {fileID: 1932921591}
+  m_Horizontal: 0
+  m_Vertical: 1
+  m_MovementType: 1
+  m_Elasticity: 0.1
+  m_Inertia: 1
+  m_DecelerationRate: 0.135
+  m_ScrollSensitivity: 1
+  m_Viewport: {fileID: 0}
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 1630113486}
+  m_HorizontalScrollbarVisibility: 0
+  m_VerticalScrollbarVisibility: 0
+  m_HorizontalScrollbarSpacing: 0
+  m_VerticalScrollbarSpacing: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &954934895
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,7 +902,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &954934896
 RectTransform:
   m_ObjectHideFlags: 0
@@ -846,7 +916,7 @@ RectTransform:
   m_Children:
   - {fileID: 1882792474}
   m_Father: {fileID: 312119390}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -901,6 +971,79 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954934895}
+  m_CullTransparentMesh: 0
+--- !u!1 &960843128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 960843129}
+  - component: {fileID: 960843131}
+  - component: {fileID: 960843130}
+  m_Layer: 5
+  m_Name: Handle           BarraColor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &960843129
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960843128}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1904674042}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -104.1}
+  m_SizeDelta: {x: 0, y: 208.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &960843130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960843128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &960843131
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960843128}
   m_CullTransparentMesh: 0
 --- !u!1 &974956886
 GameObject:
@@ -962,10 +1105,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.94509804, g: 0.31764707, b: 0.3372549, a: 1}
-    m_HighlightedColor: {r: 0.8773585, g: 0.39315593, b: 0.40828726, a: 1}
-    m_PressedColor: {r: 0.8679245, g: 0.21698113, b: 0.2373231, a: 1}
-    m_SelectedColor: {r: 0.6226415, g: 0.18503025, b: 0.1987056, a: 1}
+    m_NormalColor: {r: 0.995283, g: 1, b: 0.9992835, a: 1}
+    m_HighlightedColor: {r: 0.76214844, g: 0.9339623, b: 0.9228826, a: 1}
+    m_PressedColor: {r: 0.42145783, g: 0.7264151, b: 0.7081431, a: 1}
+    m_SelectedColor: {r: 0.1843137, g: 0.60540354, b: 0.62352943, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -981,10 +1124,10 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 342985337}
-  m_HandleRect: {fileID: 342985336}
+  m_TargetGraphic: {fileID: 974956889}
+  m_HandleRect: {fileID: 0}
   m_Direction: 2
-  m_Value: 1.0000005
+  m_Value: 0.99987656
   m_Size: 0.543058
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1026,6 +1169,94 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974956886}
   m_CullTransparentMesh: 0
+--- !u!1 &1243088286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1243088287}
+  - component: {fileID: 1243088290}
+  - component: {fileID: 1243088289}
+  - component: {fileID: 1243088288}
+  m_Layer: 5
+  m_Name: ScrollArea                   ScrollBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1243088287
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243088286}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 876010072}
+  m_Father: {fileID: 312119390}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.000030517578, y: -802.1098}
+  m_SizeDelta: {x: 0, y: 1604.1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1243088288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243088286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
+--- !u!114 &1243088289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243088286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.99607843, g: 1, b: 0.69411767, a: 0.392}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1243088290
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243088286}
+  m_CullTransparentMesh: 0
 --- !u!1 &1286652229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,7 +1291,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -391, y: -585.00073}
+  m_AnchoredPosition: {x: -391, y: -584.85547}
   m_SizeDelta: {x: 733, y: 2560.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1286652231
@@ -1094,16 +1325,16 @@ MonoBehaviour:
     un relat incre\xEFble i fascinant sobre la qu\xEDmica que entre ells hi ha.\r\n\r\nAl
     llarg d'aquest itinerari tindreu l'oportunitat de veure nombrosos exemples de
     la pres\xE8ncia quotidiana de la qu\xEDmica: des de materials de construcci\xF3
-    al xips, des de joies a medicaments. Tamb\xE9 de reaccions qu\xEDmiques, com la
-    respiraci\xF3, l'enduriment de les argiles o el rovellat del ferro. Descobrireu
+    al xips, des de joies a medicaments. Tamb\xE9 de reaccions qu\xEDmiques, com
+    la respiraci\xF3, l'enduriment de les argiles o el rovellat del ferro. Descobrireu
     per qu\xE8 la plata es torna negra i l'or no, com ha contribu\xEFt la qu\xEDmica
     a augmentar l'esperan\xE7a de vida dels humans i com funciona una bombeta o un
     fluorescent.\r\n\r\nLa ciutat es converteix en un laboratori que ens descobreix
     invisibles meravelles. Us hi atreviu?\r\n\r\nL'itinerari est\xE0 pensat per ser
     recorregut en dues o tres hores, per\xF2 tot dep\xE8n del ritme i de les explicacions.
-    Per aix\xF2 es proposen dues rutes alternatives per escur\xE7ar l'itinerari. El
-    m\xE9s curt es pot fer passant per les parades 1 a 7 i tornar enrere per fer la
-    11. Una ruta mitjana faria les parades de la 1 a la 7 per, despr\xE9s de travessar
+    Per aix\xF2 es proposen dues rutes alternatives per escur\xE7ar l'itinerari.
+    El m\xE9s curt es pot fer passant per les parades 1 a 7 i tornar enrere per fer
+    la 11. Una ruta mitjana faria les parades de la 1 a la 7 per, despr\xE9s de travessar
     el pont d\u2019en G\xF3mez, i fer les parades 10 i 11."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1240,6 +1471,130 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1630113484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1630113485}
+  - component: {fileID: 1630113488}
+  - component: {fileID: 1630113487}
+  - component: {fileID: 1630113486}
+  m_Layer: 5
+  m_Name: Scrollbar               BarraNavegacio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1630113485
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630113484}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1904674042}
+  - {fileID: 1932921591}
+  m_Father: {fileID: 876010072}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 42, y: -29.3}
+  m_SizeDelta: {x: 60.3, y: 58.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1630113486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630113484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0.995283, g: 1, b: 0.9992835, a: 1}
+    m_HighlightedColor: {r: 0.76214844, g: 0.9339623, b: 0.9228826, a: 1}
+    m_PressedColor: {r: 0.42145783, g: 0.7264151, b: 0.7081431, a: 1}
+    m_SelectedColor: {r: 0.1843137, g: 0.60540354, b: 0.62352943, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 960843130}
+  m_HandleRect: {fileID: 960843129}
+  m_Direction: 2
+  m_Value: 1.0000001
+  m_Size: 0.31409532
+  m_NumberOfSteps: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1630113487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630113484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1630113488
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630113484}
+  m_CullTransparentMesh: 0
 --- !u!1 &1821187113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1270,7 +1625,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 312119390}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -1290,7 +1645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.64705884, g: 0.2509804, b: 0.1764706, a: 1}
+  m_Color: {r: 0.32156864, g: 0.6431373, b: 0.8862745, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1380,6 +1735,251 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1904674041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1904674042}
+  m_Layer: 5
+  m_Name: Sliding Area       Barra Color
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1904674042
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904674041}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 960843129}
+  m_Father: {fileID: 1630113485}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: -20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1932921590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1932921591}
+  - component: {fileID: 1932921594}
+  - component: {fileID: 1932921593}
+  - component: {fileID: 1932921592}
+  m_Layer: 5
+  m_Name: Text (TMP)        Contingut mou
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1932921591
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932921590}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1630113485}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -391, y: -1488.9504}
+  m_SizeDelta: {x: 733, y: 4427}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1932921592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932921590}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 255f14bc90428864eaa8ccc98c729c76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1932921593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932921590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "Des d\u2019aquest indret enlairat sobre la ciutat de Girona podem abastar
+    un ampli radi de visi\xF3 que arriba fins a pobles ve\xEFns. Els assentaments
+    humans sovint han tingut lloc a prop d\u2019un riu. Girona no \xE9s una excepci\xF3,
+    ja que la travessen quatre rius: el Ter, l\u2019Onyar, el G\xFCell i el Galligants.
+    Des d\u2019aquest punt uns es poden veure mentre els altres es poden intuir.\r\nDes
+    d\u2019aquesta torre podem situar les quatre ind\xFAstries ja desaparegudes que
+    s\u2019esmenten a la introducci\xF3: la Pagans (estaria a la dreta de l\u2019esgl\xE9sia
+    de Sant Josep, en el mateix carrer Emili Grahit), els Qu\xEDmics, de la qual
+    es conserva la xemeneia, a m\xE9s d\u2019un dip\xF2sit a prop del pavell\xF3
+    de Palau Sacosta, la Grober i la Gerundense, totes dues a prop de l\u2019esgl\xE9sia
+    del Mercadal.\r\nA m\xE9s de les que no hi s\xF3n, des d\u2019aqu\xED es poden
+    veure dues ind\xFAstries m\xE9s que encara funcionen: la Nestl\xE9 a Sant Gregori
+    i la Torraspapel a Sarri\xE0 de Ter.\nSovint la qu\xEDmica passa desapercebuda,
+    perqu\xE8 t\xE9 lloc a una escala molt petita, invisible per a nosaltres. \xC9s
+    l\u2019escala nanosc\xF2pica. Aquest nom fa refer\xE8ncia a la mida, de l\u2019ordre
+    del nanometre, (1/1000.000.000 m) que tenen les petites part\xEDcules de qu\xE8
+    est\xE0 composta la mat\xE8ria i que s\u2019anomenen \xE0toms.\r\n\r\nAl llarg
+    de la hist\xF2ria hi ha hagut diferents teories per explicar els \xE0toms. Una
+    de les m\xE9s entenedores \xE9s la teoria at\xF2mica de Bohr. Segons aquesta
+    teoria, l\u2019\xE0tom \xE9s com un petit sistema solar amb un nucli que cont\xE9
+    protons i neutrons en el centre i electrons movent-se al voltant del nucli en
+    \xF2rbites ben definides.\r\nLa teoria m\xE9s acceptada actualment \xE9s la de
+    Schr\xF6dinger, en la qual s\u2019interpreta que l\u2019electr\xF3, m\xE9s que
+    un planeta d\u2019aquest sistema solar que deia Bohr, s\u2019assembla a una ona.\r\n\r\nAquest
+    \xE9s un bon indret per fer-nos una idea de com \xE9s l\u2019\xE0tom i de les
+    seves mides relatives. Si comparem l\u2019\xE0tom d\u2019hidrogen, que \xE9s
+    el m\xE9s senzill, (ja que nom\xE9s t\xE9 un prot\xF3 al nucli i un electr\xF3
+    al voltant) amb l\u2019indret on som, i el nucli fos una esfera que tingu\xE9s
+    el di\xE0metre de la torre, l\u2019electr\xF3 seria una llentia esf\xE8rica que
+    donaria voltes a una dist\xE0ncia aproximada de 500 km.\nHo sabies?\r\nMolts
+    artistes han seguit amb inter\xE8s els descobriments cient\xEDfics i els han
+    transm\xE8s a la seva obra. Per exemple, Salvador Dal\xED era una persona amb
+    moltes inquietuds; una d\u2019elles era la ci\xE8ncia. Al llarg de la seva vida,
+    determinats temes cient\xEDfics el van impressionar, i algunes de les seves pintures
+    aix\xED ho mostren. Durant els anys 30 es va interessar per les il\xB7lusions
+    \xF2ptiques i va pintar dobles imatges, tem\xE0tica que es repetiria sovint.\r\n\r\nEls
+    anys 40 l\u2019atreu la teoria qu\xE0ntica de Planck. En la d\xE8cada dels 50
+    comen\xE7a la pintura corpuscular, influ\xEFt per les teories at\xF2miques. Entre
+    els 60 i 70 s\u2019interessa per la gen\xE8tica, concretament per l\u2019estructura
+    de l\u2019ADN, i tamb\xE9 pel l\xE0ser, que el porta a realitzar la seva primera
+    exposici\xF3 d\u2019hologrames i pintures estereosc\xF2piques. Finalment, els
+    80 se centra en el fenomen de les cat\xE0strofes del matem\xE0tic Ren\xE9 Thom."
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_outlineColor:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontSize: 40
+  m_fontSizeBase: 40
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_textAlignment: 264
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.99
+  m_overflowMode: 0
+  m_firstOverflowCharacterIndex: -1
+  m_linkedTextComponent: {fileID: 0}
+  m_isLinkedTextComponent: 0
+  m_isTextTruncated: 0
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_ignoreRectMaskCulling: 0
+  m_ignoreCulling: 1
+  m_horizontalMapping: 2
+  m_verticalMapping: 2
+  m_uvLineOffset: 7
+  m_geometrySortingOrder: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_firstVisibleCharacter: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 50, y: 13.502693, z: 50, w: 45.174805}
+  m_textInfo:
+    textComponent: {fileID: 1932921593}
+    characterCount: 2970
+    spriteCount: 0
+    spaceCount: 515
+    wordCount: 517
+    linkCount: 0
+    lineCount: 92
+    pageCount: 1
+    materialCount: 1
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_spriteAnimator: {fileID: 0}
+  m_hasFontAssetChanged: 0
+  m_subTextObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1932921594
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932921590}
+  m_CullTransparentMesh: 0
 --- !u!1 &2014565859
 GameObject:
   m_ObjectHideFlags: 0
